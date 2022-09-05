@@ -320,19 +320,17 @@ letter-spacing: 0.03em;
 .overlay_what_we_do{
     position: absolute;
     width: 370px;
-    
 height: 70px;
-    top:224px;
+    bottom:0px;
     left:0;
     font-weight: 700;
-font-size: 14px;
 line-height: 1.14;
-text-align: center;
-letter-spacing: 0.03em;
 text-transform: uppercase;
     background: rgba(47, 48, 58, 0.8);
     color:var(--primary-text-color-theme-dark);
-   padding: 27px 0;
+ display:flex;
+ justify-content: center;
+ align-items: center;
 }
 .item_what_we_do{
     position: relative;
@@ -469,7 +467,7 @@ width: 170px;
 height:92px;
 border: 1px solid #AFB1B8;
 color: var(--primary-color-icons);
-transition: color var(--transition-dur-and-func);
+transition: color var(--transition-dur-and-func) , border-color var(--transition-dur-and-func);
 
 }
 
@@ -611,7 +609,7 @@ background:var(--team-buttons-background-color);
 color:var(--primary-text-color-theme-light);
 border-radius: 4px;
 padding: 6px 22px;
-transition:background-color var(--transition-dur-and-func) ,color var(--transition-dur-and-func);
+transition:background-color var(--transition-dur-and-func) ,color var(--transition-dur-and-func) , box-shadow var(--transition-dur-and-func);
 
 }
 
@@ -698,13 +696,13 @@ letter-spacing: 0.03em;
   /* ========================  BACKDROP  ======================== */
 
   .backdrop{
-    position: absolute;
+    position: fixed;
 width: 100%;
-height: 1024px;
+height: 100%;
 left: 0;
 top: 0;
 transition: opacity 500ms ease, visibility 500ms ease;
-    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
 .backdrop.is-hidden{
